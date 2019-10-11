@@ -6,11 +6,11 @@ sshtunnel.TUNNEL_TIMEOUT = 10.0
 
 with sshtunnel.SSHTunnelForwarder(
 		('ssh.pythonanywhere.com'),
-		ssh_username='lenildojunior', ssh_password='*chicoADM*',
+		ssh_username='lenildojunior', ssh_password='senha de acesso ao pythonanywhere',
 		remote_bind_address=('lenildojunior.mysql.pythonanywhere-services.com', 3306)
 ) as tunnel:
 	connection = mysql.connector.connect(
-  	user='lenildojunior', password='mysqlAdmin',
+  	user='lenildojunior', password='senha do banco no pythonanywhere',
 		host='127.0.0.1', port=tunnel.local_bind_port,
 		database='lenildojunior$frutas',
 	)
